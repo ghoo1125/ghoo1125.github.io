@@ -1,0 +1,294 @@
+body, html {
+  padding: 0;
+  margin: 0;
+  user-select: none;
+}
+
+body:after {
+  background: url('../img/background.jpg') no-repeat center center fixed;
+  background-size: cover;
+  opacity: 0.72;
+  content : "";
+  z-index: -1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+select {
+  display: block;
+  padding: 1rem 2rem;
+  background: #FFF;
+  color: #777;
+  border: 1px solid #999;
+  border-radius: 10px;
+  font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
+  font-size: 1rem;
+  text-align: center;
+  cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+.logo {
+  display: block;
+  margin: 20px auto;
+  /* 1229 * 377 */
+  width: 36.87vw;
+  height: 11.31vw;
+}
+
+.left {
+  height: 100vh;
+  width: 25%;
+  float: left;
+}
+
+.mid {
+  width: 50%;
+  float: left;
+}
+
+.right {
+  height: 100vh;
+  width: 25%;
+  float: left;
+}
+
+.selects {
+  top: 20vh;
+  position: relative;
+  text-align: center;
+}
+
+.custom-select {
+  text-align: center;
+  font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
+  margin: 20px 10px;
+}
+
+.custom-select>p {
+  color: #777;
+  font-size: 14pt;
+  font-weight: bold;
+  margin: 2px auto;
+  letter-spacing: 2px;
+}
+
+.custom-button {
+  display: block;
+  width: 60%;
+  height: 10%;
+  margin: 0 auto;
+  padding: 15px 0;
+  background: #FFF;
+  color: #777;
+  border: 1px solid #999;
+  border-radius: 10px;
+  font-size: 12pt;
+  letter-spacing: 1px;
+  cursor: pointer;
+  outline: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+.custom-option {
+  width: 50%;
+  margin: 0 auto;
+  font-size: 10pt;
+  padding: 5px 0;
+  background: #FFF;
+  color: #777;
+  cursor: pointer;
+  border: 1px solid #999;
+  border-top: none;
+  display: none;
+  position: absolute;
+}
+
+.custom-option:hover {
+  color: #ddd;
+  background: #999;
+}
+
+.option {
+  display: block;
+  width: 50%;
+  height: 10%;
+  margin: 20px auto;
+  font-size: 16pt;
+}
+
+#map {
+  height: 350px;
+  width: 85%;
+  margin: 0 auto;
+  border: 1px solid #ddd;
+  opacity: 0.8;
+}
+
+#open-now {
+  display: inline-block;
+  margin: 20px auto;
+  border-radius: 5px;
+  border: 1px solid #999;
+  padding: 5px;
+}
+
+#open-now p {
+  display: inline;
+  color: #777;
+  font-size: 10pt;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.place {
+  margin: 20px auto;
+  width: 90%;
+  border-radius: 5px;
+  border: 1px solid #999;
+}
+
+#place-search {
+  width: 80%;
+}
+
+#place-button {
+  width: 15%;
+}
+
+#current-button {
+  display: block;
+  margin: 5px auto;
+  width: 70%;
+}
+
+#btn-go {
+  display: block;
+  height: 80px;
+  width: 80px;
+  cursor: pointer;
+  line-height: 1.3 !important;
+  background-color: #f1f1f1;
+  text-align: center;
+  font-size: 60px !important;
+  color: #444;
+  transition: 0.1s ease-out;
+  border: 1px solid #777;
+  border-top-color: #999;
+  border-bottom: 4px solid #555;
+  border-radius: 50px;
+  outline: none;
+  margin: 10px auto;
+}
+
+#loading {
+  display: none;
+  height: 80px;
+  width: 80px;
+  cursor: pointer;
+  transition: 0.1s ease-out;
+  border: 1px solid #777;
+  border-top-color: #999;
+  border-bottom: 4px solid #555;
+  border-radius: 50px;
+  margin: 10px auto;
+}
+
+#btn-go:active, #loading:active {
+	margin-top: 15px;
+	color: #777;
+	border: 1px solid #999;
+	box-shadow: inset 0 0 5px 0 #333;
+}
+
+.rest {
+  border: 1px solid #999;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.rest-name {
+  display: block;
+  font-size: 16pt;
+  text-align: center;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: underline;
+  color: #4169E1;
+}
+
+.rest-img {
+  margin: 0 auto;
+  width: 100%;
+  height: 150px;
+}
+
+.rest-info {
+  user-select: text;
+  margin: 0 0 0 10%;
+  line-height: 1.5;
+}
+
+.dropdown-content {
+  display: none;
+}
+
+.dropdown:hover .dropdown-content {
+  animation: animatedown 1s;
+  display: block;
+}
+
+@keyframes animatedown {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/*
+.drop-btn:after {
+  content: '\2304';
+}
+
+.dropdown:hover .drop-btn:after{
+	content: '\02C4';
+}
+*/
+.slide-btn>button {
+  color: #aaa;
+  background-color: Transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 0;
+  margin: 80px 0 0 35%;
+  font-size: 16pt;
+}
+
+.row {
+  overflow: auto;
+}
+
+.col {
+  float: left;
+}
+
+.col.s1 {
+  width: 10%;
+}
+
+.col.s2 {
+  width: 80%;
+}

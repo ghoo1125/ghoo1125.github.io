@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Where's The Food</title>
+  <!--
+    This project aims to improve the convenience of searching for restaurants
+    based on several parameters specified by users. Parameters that we take into
+    account are listed below:
+
+    operationTime: Operation time of the restaurants that user expect.
+
+    distance: Search for the restaurants within the distance based on user's
+              current position.
+
+    restaurantStyle: Restaurant style that user expect.
+  -->
+
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" href="favicon.ico">
+</head>
+
+<body>
+  <div>
+    <div class="left">
+      <div class="selects">
+        <div class="place">
+          <div>
+            <input type="search" id="place-search" placeholder="Search a place...">
+            <button id="place-button"><i class="fa fa-search"></i></button>
+          </div>
+          <div>
+            <button id="current-button"><i class="fa fa-map-marker"></i></button>
+          </div>
+        </div>
+        <div id="open-now">
+          <p>Open Now:</p>
+          <input id="open-now-value" type="checkbox" checked>
+        </div>
+        <div class="custom-select">
+          <p id='custom-transport'>Transport</p>
+          <button class="custom-button">SELECT</button>
+          <div class="custom-option">WALK</div>
+          <div class="custom-option">SCOOTER</div>
+          <div class="custom-option">CAR</div>
+        </div>
+        <div class="custom-select">
+          <p id='custom-type'>Type</p>
+          <button class="custom-button">SELECT</button>
+          <div class="custom-option">Vegan</div>
+          <div class="custom-option">Random</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="mid">
+      <img class="logo" src="img/logo.png"></img>
+
+      <div id="map"></div>
+
+      <div>
+        <i id="btn-go" class="material-icons">search</i>
+        <img id="loading" src="img/loading.gif"></img>
+      </div>
+    </div>
+
+    <div id="rest-results" class="right">
+<!--  left for debugging
+      <div class="rest">
+        <span class="rest-name">費利榭</span>
+        <div class="row">
+          <div class="slide-btn col s1">
+            <button onclick="plusDivs(-1)">❮</button>
+          </div>
+          <div class="slide-img col s2">
+            <img class="rest-img" src="https://maps.googleapis.com/maps/api/place/js/PhotoService.GetPhoto?1sCmRaAAAAJsQlojSPGGkutxCP7TQA0JQTDeL4uLgUN71CwN0GFaZC7ALbaUvFx9dOJ4FxvYfFRi3shCq48MnQNgJEbfJr83XDBw6nohwexKYFuTxpvCjCBa6MWlpYwRWmV7cGC2FgEhD6XPIW7IWbTVPHUuinmWFkGhQ-Akvhw7dajNp2kK8pAVF6WsLFDQ&3u300&4u300&5m1&2e1&key=AIzaSyAVsffuGECQBSJPxfl8CWTiwZENjLABueU&callback=none&token=6830"></img>
+          </div>
+          <div class="slide-btn col s1">
+            <button onclick="plusDivs(1)">❯</button>
+          </div>
+        </div>
+
+        <div class="rest-info">
+          <div class="rest-phone">
+            <i class="fa fa-phone"></i>
+            <span>02 2758 8123</span>
+          </div>
+          <div class="rest-addr">
+            <i class="fa fa-map-marker"></i>
+            <span>110台灣台北市信義區莊敬路468號</span>
+          </div>
+          <div class="rest-time">
+            <div class="dropdown">
+              <i class="fa fa-clock-o"></i>
+              <span class="drop-btn">營業中 </span>
+              <ul class="dropdown-content">
+                <li>星期一: 10:30 – 20:00</li>
+                <li>星期二: 10:30 – 20:00</li>
+                <li>星期三: 10:30 – 20:00</li>
+                <li>星期四: 10:30 – 20:00</li>
+                <li>星期五: 10:30 – 20:00</li>
+                <li>星期六: 10:30 – 20:00</li>
+                <li>星期日: 休息</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+-->
+    </div>
+  </div>
+
+  <script type="text/javascript" charset="UTF-8" src="js/main.js"></script>
+  <script type="text/javascript" charset="UTF-8" src="js/custom_select.js"></script>
+  <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAVsffuGECQBSJPxfl8CWTiwZENjLABueU&callback=main&libraries=places">
+  </script>
+
+</body>
+</html>
